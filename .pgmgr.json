@@ -1,0 +1,1 @@
+{ "url": "postgres://nickc@localhost:5432/fpc?sslmode=disable&password=postgres", "migration-folder": "migrations", "dump-file": "migrations/dump.sql", "seed-tables": [] }

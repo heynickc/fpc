@@ -1,0 +1,61 @@
+{
+	"ImportPath": "github.com/heynickc/fpc",
+	"GoVersion": "go1.5",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/Sirupsen/logrus",
+			"Comment": "v0.8.6-13-g84b968c",
+			"Rev": "84b968cb9f82d727044973f8255489bbe15e9948"
+		},
+		{
+			"ImportPath": "github.com/carbocation/interpose",
+			"Rev": "50c09d12f8624ab10532f931cb630d0bf5f7c2c7"
+		},
+		{
+			"ImportPath": "github.com/gorilla/context",
+			"Rev": "1c83b3eabd45b6d76072b66b746c20815fb2872d"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Rev": "ee1815431e497d3850809578c93ab6705f1a19f7"
+		},
+		{
+			"ImportPath": "github.com/gorilla/securecookie",
+			"Rev": "e95799a481bbcc3d01c2ad5178524cb8bec9f370"
+		},
+		{
+			"ImportPath": "github.com/gorilla/sessions",
+			"Rev": "b6bcae186ac3099dba8fafce125dc930393f1e5e"
+		},
+		{
+			"ImportPath": "github.com/jmoiron/sqlx",
+			"Comment": "sqlx-v1.1-45-g3a92b1f",
+			"Rev": "3a92b1fd96032c4490fa618370fbf98ec69b680c"
+		},
+		{
+			"ImportPath": "github.com/lib/pq",
+			"Comment": "go1.0-cutoff-59-gb269bd0",
+			"Rev": "b269bd035a727d6c1081f76e7a239a1b00674c40"
+		},
+		{
+			"ImportPath": "github.com/tylerb/graceful",
+			"Comment": "v1.2.1",
+			"Rev": "ac9ebe4f1ee151ac1eeeaef32957085cba64d508"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/bcrypt",
+			"Rev": "aedad9a179ec1ea11b7064c57cbc6dc30d7724ec"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/blowfish",
+			"Rev": "aedad9a179ec1ea11b7064c57cbc6dc30d7724ec"
+		},
+		{
+			"ImportPath": "golang.org/x/net/netutil",
+			"Rev": "ea47fc708ee3e20177f3ca3716217c4ab75942cb"
+		}
+	]
+}

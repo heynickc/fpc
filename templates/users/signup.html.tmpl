@@ -1,0 +1,37 @@
+{{define "content"}}
+<div id="main" class="wrapper style3">
+  <div class="container 75%">
+    <header class="major">
+      <h2>Sign Up</h2>
+      <p>Your information is absolutely safe with us</p>
+    </header>
+    <section id="content">
+      <form method="post" action="#">
+        <div class="row uniform 50%">
+          <div class="6u$ -3u 12u$(xsmall)">
+            <input type="email" name="Email" id="Email" value="" placeholder="Email" />
+          </div>
+        </div>
+        <div class="row uniform 50%">
+          <div class="6u$ -3u 12u$(xsmall)">
+            <input name="Password" type="password" placeholder="Password" required>
+          </div>
+        </div>
+        <div class="row uniform 50%">
+          <div class="6u$ -3u 12u$(xsmall)">
+            <input name="PasswordAgain" type="password" placeholder="Password Again" required>
+          </div>
+        </div>
+        <div class="row uniform">
+          <div class="12u$">
+            <ul class="actions align-center">
+              <li><input type="submit" value="Sign Up" class="special" /></li>
+              <li><input type="reset" value="Reset Form" /></li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>
+{{end}}
