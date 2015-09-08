@@ -1922,11 +1922,16 @@ input[type="button"],
     position: absolute;
     top: 0;
     width: 1px; }
-  .feature .icon.major {
+  .feature .icon {
     font-size: 0.675em;
     left: 0;
     position: absolute;
     top: 0; }
+    .feature .icon.major {
+      font-size: 0.675em;
+      left: 0;
+      position: absolute;
+      top: 0; }
   .feature p {
     margin: 0; }
 

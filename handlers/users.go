@@ -66,7 +66,7 @@ func GetLogin(w http.ResponseWriter, r *http.Request) {
 
 	currentUserInterface := session.Values["user"]
 	if currentUserInterface != nil {
-		http.Redirect(w, r, "/", 302)
+		http.Redirect(w, r, "/home", 302)
 		return
 	}
 
@@ -100,7 +100,7 @@ func PostLogin(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	http.Redirect(w, r, "/", 302)
+	http.Redirect(w, r, "/home", 302)
 }
 
 func GetLogout(w http.ResponseWriter, r *http.Request) {
