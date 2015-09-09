@@ -50,11 +50,29 @@
     </div>
 
     <!-- Scripts -->
-      <script src="assets/js/jquery.min.js"></script>
-      <script src="assets/js/jquery.dropotron.min.js"></script>
-      <script src="assets/js/skel.min.js"></script>
-      <script src="assets/js/util.js"></script>
-      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-      <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/lodash.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>     
+    <script src="assets/js/clndr.min.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script type="text/template" id="clndr-3-template">
+      <div class="month-bar"><%= month %></div>
+      <div class="clndr-grid">
+        <div class="days-of-the-week clearfix">
+          <% _.each(daysOfTheWeek, function(day) { %>
+            <div class="header-day"><%= day %></div>
+          <% }); %>
+        </div>
+        <div class="days clearfix">
+          <% _.each(days, function(day) { %>
+            <div class="<%= day.classes %>" id="<%= day.id %>"><span class="day-number"><%= day.day %></span></div>
+          <% }); %>
+        </div>
+      </div>
+    </script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

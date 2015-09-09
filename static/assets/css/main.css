@@ -72,7 +72,7 @@
 .cal1 .clndr .clndr-table .header-days {
   height: 30px;
   font-size: 10px;
-  background: #0D70A6; }
+  background: #A5A5a5; }
 
 .cal1 .clndr .clndr-table .header-days .header-day {
   vertical-align: middle;
@@ -101,7 +101,7 @@
 
 .cal1 .clndr .clndr-table tr .day.today,
 .cal1 .clndr .clndr-table tr .day.my-today {
-  background: #9AD6E3; }
+  background: #A5A5a5; }
 
 .cal1 .clndr .clndr-table tr .day.today:hover,
 .cal1 .clndr .clndr-table tr .day.my-today:hover {

@@ -110,7 +110,7 @@
 			// finally onYearChange (if the year changed).
 
 			calendars.clndr1 = $('.cal1').clndr({
-			events: eventArray,
+			// events: eventArray,
 			// constraints: {
 			//   startDate: '2013-11-01',
 			//   endDate: '2013-11-15'
