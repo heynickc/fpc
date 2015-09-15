@@ -20,8 +20,8 @@
 
 .cal1 .clndr .clndr-controls .clndr-control-button {
   float: left;
-  width: 33%;
-  text-align: left; }
+  text-align: left;
+  width: 33%; }
 
 .cal1 .clndr .clndr-controls .clndr-control-button.rightalign {
   text-align: right;
@@ -72,7 +72,7 @@
 .cal1 .clndr .clndr-table .header-days {
   height: 30px;
   font-size: 10px;
-  background: #A5A5a5; }
+  background: #0D70A6; }
 
 .cal1 .clndr .clndr-table .header-days .header-day {
   vertical-align: middle;
@@ -101,7 +101,7 @@
 
 .cal1 .clndr .clndr-table tr .day.today,
 .cal1 .clndr .clndr-table tr .day.my-today {
-  background: #A5A5a5; }
+  background: #9AD6E3; }
 
 .cal1 .clndr .clndr-table tr .day.today:hover,
 .cal1 .clndr .clndr-table tr .day.my-today:hover {
