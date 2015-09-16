@@ -72,7 +72,18 @@ func TestAllProducts(t *testing.T) {
 	}
 
 	// Delete all product rows that were inserted for test
-	// for _, productRow := range productRows {
-	// 	_, err = p.DeleteById(nil, productRow.ID)
-	// }
+	for _, productRow := range productRows {
+		_, err = p.DeleteById(nil, productRow.ID)
+	}
+}
+
+func TestProductRowFormattedDate(t *testing.T) {
+	now := time.Now()
+	p := &ProductRow{RoastDate: now}
+	expected := now.Format("Monday Jan 02, 2006")
+
+	if p.FormattedRoastDate() != expected {
+		t.Errorf("Bad formatting of roast date. Expected %v, but got %v", expected, p.FormattedRoastDate())
+	}
+
 }

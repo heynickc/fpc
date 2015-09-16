@@ -26,6 +26,10 @@ type ProductRow struct {
 	Price       float32   `db:"price"`
 }
 
+func (pr ProductRow) FormattedRoastDate() string {
+	return pr.RoastDate.Format("Monday Jan 02, 2006")
+}
+
 type Product struct {
 	Base
 }
