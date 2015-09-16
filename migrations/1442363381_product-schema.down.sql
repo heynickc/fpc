@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS products CASCADE;
+DROP INDEX IF EXISTS idx_products_name;

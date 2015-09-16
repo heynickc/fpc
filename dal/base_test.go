@@ -3,11 +3,12 @@ package dal
 import (
 	"fmt"
 	"os"
+	"testing"
+
 	"github.com/heynickc/fpc/libstring"
 	"github.com/heynickc/fpc/libunix"
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
-	"testing"
 )
 
 func newEmailForTest() string {
@@ -16,8 +17,8 @@ func newEmailForTest() string {
 
 func newDbForTest(t *testing.T) *sqlx.DB {
 	var err error
-	pguser, _, pghost, pgport, pgsslmode := os.Getenv("PGUSER"), os.Getenv("PGPASSWORD"), os.Getenv("PGHOST"), os.Getenv("PGPORT"), os.Getenv("PGSSLMODE")
-	if pguser == ""{
+	pguser, pgpass, pghost, pgport, pgsslmode := os.Getenv("PGUSER"), os.Getenv("PGPASSWORD"), os.Getenv("PGHOST"), os.Getenv("PGPORT"), os.Getenv("PGSSLMODE")
+	if pguser == "" {
 		pguser, err = libunix.CurrentUser()
 		if err != nil {
 			t.Fatalf("Getting current user should never fail. Error: %v", err)
@@ -36,7 +37,7 @@ func newDbForTest(t *testing.T) *sqlx.DB {
 		pgsslmode = "disable"
 	}
 
-	db, err := sqlx.Connect("postgres", fmt.Sprintf("postgres://%v@%v:%v/fpc-test?sslmode=%v", pguser, pghost, pgport, pgsslmode))
+	db, err := sqlx.Connect("postgres", fmt.Sprintf("postgres://%v@%v:%v/fpc-test?sslmode=%v&password=%v", pguser, pghost, pgport, pgsslmode, pgpass))
 	if err != nil {
 		t.Fatalf("Connecting to local postgres should never fail. Error: %v", err)
 	}
