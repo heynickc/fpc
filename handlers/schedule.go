@@ -4,11 +4,24 @@ import (
 	"html/template"
 	"net/http"
 
+	"github.com/gorilla/context"
+	"github.com/heynickc/fpc/dal"
 	"github.com/heynickc/fpc/libhttp"
+	"github.com/jmoiron/sqlx"
 )
 
 func GetSchedule(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html")
+
+	db := context.Get(r, "db").(*sqlx.DB)
+	p := dal.NewProduct(db)
+	products, err := p.AllProducts(nil)
+
+	data := struct {
+		ProductRows []*dal.ProductRow
+	}{
+		products,
+	}
 
 	tmpl, err := template.ParseFiles("templates/schedule.html.tmpl", "templates/home.html.tmpl")
 	if err != nil {
@@ -16,5 +29,5 @@ func GetSchedule(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	tmpl.Execute(w, nil)
+	tmpl.Execute(w, data)
 }

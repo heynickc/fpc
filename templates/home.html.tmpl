@@ -11,37 +11,19 @@
 			<table class="alt">
 				<thead>
 					<tr>
-						<th>Day</th>
-						<th>Bean</th>
-	    				<th>Price</th>						
-					</tr>							
+						<th>Roast Date</th>
+						<th>Description</th>
+	    				<th>Price</th>
+					</tr>
 				</thead>
 				<tbody>
+					{{ range .ProductRows }}
 					<tr>
-						<td>Tuesday, September 14th 2015</td>
-						<td>Guatemalan</td>
-	    				<td><a class="button" href="">$19.99</a></td> 
+						<td>{{ .RoastDate }}</td>
+						<td>{{ .Description }}</td>
+	    				<td><a class="button" href="">${{ .Price }}</a></td>
 					</tr>
-					<tr>
-				        <td>Tuesday, September 14th 2015</td>
-				        <td>Guatemalan</td>
-				        <td><a class="button" href="">$19.99</a></td> 
-					</tr>
-					<tr>
-				        <td>Tuesday, September 14th 2015</td>
-				        <td>Guatemalan</td>
-				        <td><a class="button" href="">$19.99</a></td> 
-					</tr>
-					<tr>
-				        <td>Tuesday, September 14th 2015</td>
-				        <td>Guatemalan</td>
-				        <td><a class="button" href="">$19.99</a></td> 
-					</tr>
-					<tr>
-				        <td>Tuesday, September 14th 2015</td>
-				        <td>Guatemalan</td>
-				        <td><a class="button" href="">$19.99</a></td> 
-					</tr>
+					{{ end }}
 				</tbody>
 			</table>
 		</div>

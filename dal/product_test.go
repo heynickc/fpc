@@ -22,7 +22,7 @@ func TestProductCRUD(t *testing.T) {
 
 	description := "Roasted coffee on 9-17-15. Quatemalan, Ethiopian, Columbian"
 	roastDate := time.Now()
-	var price float32 = 19.99
+	price := 19.99
 
 	productRow, err := p.InsertNewProduct(nil, newProductNameForTest(), description, roastDate, price)
 
@@ -52,7 +52,7 @@ func TestAllProducts(t *testing.T) {
 	for i := 0; i < 10; i++ {
 		description := "Roasted Day: 9-17-15. Quatemalan, Ethiopian, Columbian"
 		roastDate := time.Now()
-		var price float32 = 19.99
+		price := 19.99
 
 		productRow, err := p.InsertNewProduct(nil, newProductNameForTest(), description, roastDate, price)
 		productRows = append(productRows, productRow)
@@ -72,7 +72,7 @@ func TestAllProducts(t *testing.T) {
 	}
 
 	// Delete all product rows that were inserted for test
-	for _, productRow := range productRows {
-		_, err = p.DeleteById(nil, productRow.ID)
-	}
+	// for _, productRow := range productRows {
+	// 	_, err = p.DeleteById(nil, productRow.ID)
+	// }
 }

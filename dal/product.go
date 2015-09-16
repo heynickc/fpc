@@ -48,7 +48,7 @@ func (p *Product) GetById(tx *sqlx.Tx, id int64) (*ProductRow, error) {
 	return product, err
 }
 
-func (p *Product) InsertNewProduct(tx *sqlx.Tx, name, description string, roastDate time.Time, price float32) (*ProductRow, error) {
+func (p *Product) InsertNewProduct(tx *sqlx.Tx, name, description string, roastDate time.Time, price float64) (*ProductRow, error) {
 	if name == "" {
 		return nil, errors.New("Name cannot be blank.")
 	}
