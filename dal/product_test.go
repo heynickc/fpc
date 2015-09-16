@@ -85,5 +85,4 @@ func TestProductRowFormattedDate(t *testing.T) {
 	if p.FormattedRoastDate() != expected {
 		t.Errorf("Bad formatting of roast date. Expected %v, but got %v", expected, p.FormattedRoastDate())
 	}
-
 }

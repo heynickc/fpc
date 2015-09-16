@@ -37,7 +37,7 @@ func newDbForTest(t *testing.T) *sqlx.DB {
 		pgsslmode = "disable"
 	}
 
-	db, err := sqlx.Connect("postgres", fmt.Sprintf("postgres://%v@%v:%v/fpc?sslmode=%v&password=%v", pguser, pghost, pgport, pgsslmode, pgpass))
+	db, err := sqlx.Connect("postgres", fmt.Sprintf("postgres://%v@%v:%v/fpc-test?sslmode=%v&password=%v", pguser, pghost, pgport, pgsslmode, pgpass))
 	if err != nil {
 		t.Fatalf("Connecting to local postgres should never fail. Error: %v", err)
 	}
