@@ -5,8 +5,32 @@
 		<h2>Roast Schedule</h2>
 		<p>Here's when our next several roasts are happening</br> Sign up or log in to buy</p>
 	</header>
-  	<div class="cal1"></div>
+	<!-- <div class="cal1"></div> -->
 	<div class="container">
+		<section>
+			<form method="post" action="/product">
+				<div class="row uniform 50%">
+					<div class="-1u 4u 12u$(xsmall)">
+						<input type="text" name="Name" id="name" value="" placeholder="Name" />
+					</div>
+					<div class="4u 12u$(xsmall)">
+						<input type="text" name="RoastDate" id="roastDate" value="" placeholder="Roast Date" />
+					</div>
+					<div class="2u 12u$(xsmall)">
+						<input type="text" name="Price" id="price" value="" placeholder="Price" />
+					</div>
+					<div class="-1u 10u 12u$(xsmall)">
+						<input type="text" name="Description" id="description" value="" placeholder="Description" />
+					</div>
+					<div class="12u$">
+						<ul class="actions">
+							<li><input type="submit" value="Submit" class="special" /></li>
+							<li><input type="reset" value="Reset" /></li>
+						</ul>
+					</div>
+				</div>
+			</form>
+		</section>
 		<div class="table-wrapper">
 			<table class="alt">
 				<thead>

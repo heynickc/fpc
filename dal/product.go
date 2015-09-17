@@ -27,7 +27,8 @@ type ProductRow struct {
 }
 
 func (pr ProductRow) FormattedRoastDate() string {
-	return pr.RoastDate.Format("Monday Jan 02, 2006")
+	// return pr.RoastDate.Format("Monday Jan 02, 2006")
+	return pr.RoastDate.Format("2006-01-02 03:04")
 }
 
 type Product struct {

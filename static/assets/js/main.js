@@ -152,6 +152,8 @@
 				showAdjacentMonths: true,
 				adjacentDaysChangeMonth: false
 			});
+			
+			rome(roastDate);
 	});
 
 })(jQuery);

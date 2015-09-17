@@ -80,7 +80,7 @@ func TestAllProducts(t *testing.T) {
 func TestProductRowFormattedDate(t *testing.T) {
 	now := time.Now()
 	p := &ProductRow{RoastDate: now}
-	expected := now.Format("Monday Jan 02, 2006")
+	expected := now.Format("2006-01-02 03:04")
 
 	if p.FormattedRoastDate() != expected {
 		t.Errorf("Bad formatting of roast date. Expected %v, but got %v", expected, p.FormattedRoastDate())

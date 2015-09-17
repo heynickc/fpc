@@ -40,7 +40,7 @@ func PostProduct(w http.ResponseWriter, r *http.Request) {
 	db := context.Get(r, "db").(*sqlx.DB)
 
 	name := r.FormValue("Name")
-	roastDate, err := time.Parse("Monday Jan 02, 2006", r.FormValue("RoastDate"))
+	roastDate, err := time.Parse("2006-01-02 03:04", r.FormValue("RoastDate"))
 	description := r.FormValue("Description")
 	price, err := strconv.ParseFloat(r.FormValue("Price"), 64)
 	if err != nil {
